@@ -1,0 +1,108 @@
+
+<html>
+<head>
+    <link href="styles/style.css" rel="stylesheet" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--to work in IE---->
+        
+    <meta id="Viewport" name="viewport" content="width=initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,device-width;height=device-height">
+
+        <script type="text/javascript">
+            $(function () {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    var ww = ($(window).width() < window.screen.width) ? $(window).width() : window.screen.width; //get proper width
+                    var mw = 480; // min width of site
+                    var ratio = ww / mw; //calculate ratio
+                    if (ww < mw) { //smaller than minimum size
+                        $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+                    }
+                    else { //regular size
+                        $('#Viewport').attr('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+                    }
+                }
+            }
+               );
+        </script>
+		<script>
+            window.onorientationchange = function () {
+                var orientation = window.orientation;
+                document.getElementById('footer').removeAttribute("style");
+                switch (orientation) {
+                    case 0:
+                        // alert('1');
+                        // document.getElementById('footer').removeAttribute("style");
+                        setTimeout(function () {
+                            $('#footer').attr('style', 'text-align:left;position: fixed; left: 0;right:0; bottom: 0;');
+
+                            $("#tdSpace").height($(window).height() - $(".bgimg").height());
+                            $('#mainpage').attr('style', 'margin-top:0;top:0');
+                        }, 300);
+                        break;
+
+                    case -90:
+                        setTimeout(function () {
+                            $('#footer').attr('style', 'text-align:left;position: fixed; left: 0;right:0; bottom: 0;');
+
+                            $("#tdSpace").height($(window).height() - $(".bgimg").height());
+                            $('#mainpage').attr('style', 'margin-top:0;top:0');
+                        }, 300);
+                        break;
+
+                    case 90:
+                        setTimeout(function () {
+                            $('#footer').attr('style', 'text-align:left;position: fixed; left: 0;right:0; bottom: 0;');
+
+                            $("#tdSpace").height($(window).height() - $(".bgimg").height());
+                            $('#mainpage').attr('style', 'margin-top:0;top:0');
+                        }, 300);
+                        break;
+                }
+            }
+        </script>
+
+    
+        <style type="text/css">  
+        </style>
+    <title>my usage bills</title>
+</head>
+<body style="background-image:url('images/inner-bg-repete.png');height:100%!important;">
+    <form id="form1" runat="server">
+      <div >
+        <div id="header" class="headermainsub">
+            <div class="headerbckbtn"><a href="home.html"><img src="images/back-btn.png" /></a></div>
+            <div class="headerlogo"><img src="images/logo.png"/></div>
+            <div class="headerhomebtn"><a href="home.html"><img src="images/home-btn.png" /></a></div>
+        </div>
+        <div id="maindiv">
+            <div class="MMAmain">
+                <div class="txtmain">My Usage/Bills</div>
+                <img src="images/MyUsageBills-white.png" style=" padding-left: 2%; "/>
+            </div>
+            <div class="MMAsub">
+                <div class="MMAsub1">Graph showing usage</div>
+                <div><img src="images/black-forward-arrow.png" class="MMAsub1img" /></div>
+            </div>
+            <div class="MMAsub">
+                <div class="MMAsub1">See usage breakdown</div>
+                <div><img src="images/black-forward-arrow.png" class="MMAsub1img"/></div>
+            </div>
+            <div class="MMAsub">
+                <div class="MMAsub1">See my last statement</div>
+                <div><img src="images/black-forward-arrow.png" class="MMAsub1img"/></div>
+            </div>
+            <div style="margin-bottom:5%;"></div>
+         </div>
+         <div id="footer" class="footermain">
+                    <div id="footerlft">
+                        <div class="footerlft">PRIVACY</div>
+                        <div style="float:left;">
+                            <img src="images/footer-dooted-line.png" class="footerdotline"/>
+                        </div>
+                        <div class="footerlft">LEGAL</div>
+                    </div>
+                    <div class="footerrgt">@ 2013 Virgin Mobile</div>
+         </div>
+    </div>
+  </form>
+</body>
+</html>
