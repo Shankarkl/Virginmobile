@@ -105,6 +105,20 @@
                 document.getElementById("mouseleft").innerHTML = ev.pageX + "px";
             }
 </script>-->
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "123" && form.pswrd.value == "admin")
+  {
+    window.open('home.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
         
         <style type="text/css">  
         </style> 
@@ -121,12 +135,12 @@
                 <div id="login" class="logintxt">LOGIN</div>
                 <div id="logincontent" >
                     <div class="labbx">Cell number</div>
-                    <div class="txtbx"><input id="Text1" type="text" maxlength="10" class="txtfun"/><br /></div>
+                    <div class="txtbx"><input id="Text1" type="text" maxlength="10" class="txtfun" name="userid"/><br /></div>
                     <div class="labbx">Password</div>
-                    <div class="txtbx"><input id="Password1" type="password" class="txtfun"/><br /></div>
-                    <div><a href="home.html">
-                            <input type="button" class="loginbtn"/ >
-                         </a>
+                    <div class="txtbx"><input id="Password1" type="password" class="txtfun" name="pswrd"/><br /></div>
+                    <div>
+                            <input type="button" class="loginbtn"  onclick="check(this.form)"/ >
+                         
                     </div>
                 </div>
                 <div style="margin-top:20%;">

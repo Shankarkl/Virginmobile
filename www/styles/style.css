@@ -7,12 +7,16 @@ body {
     margin:0%;
     padding:0%;
 }
+
+ a{
+	text-decoration:none!important;
+	border:0px!important;
+}
+
 form {
     margin-bottom:0%;
 }
-.a:-webkit-any-link {
-    text-decoration: underline;
-}
+
 #footer {
     position: fixed;
     bottom: 0;
@@ -48,7 +52,7 @@ form {
     padding-top:6px;
     padding-bottom:6px;
     padding-right: 2%;  
-    font-family:Tahoma; 
+    font-family:arial; 
     color:#fffefe;
     display:inline-block; 
 }
@@ -58,7 +62,7 @@ form {
     font-size: 14px;
     text-align: right;
     margin-right: 1%;
-    font-family:Tahoma;
+    font-family:arial;
     color:#fffefe; 
     display:inline-block; 
     float: right;
@@ -150,6 +154,7 @@ form {
         float:left;
         width: 83%;
         height: 65px;
+		border:0px!important;
 }
 .subbar1 {
     float: left;
